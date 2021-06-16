@@ -21,10 +21,8 @@
 		<div class="jumbotron text-center"  style="background-color:#61CDF5;color:white">
 		<h3><span class="glyphicon glyphicon-user"></span></h3><h3>Register Yourself as a Candidate</h3><br>
 		<button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Click Here</button>
-		<!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog" style="color:black">>
 			<div class="modal-dialog">
-		  <!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
