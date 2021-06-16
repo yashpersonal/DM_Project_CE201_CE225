@@ -3,7 +3,7 @@ require('connection.php');
 
 $email=$_POST['email'];
 $password=$_POST['password'];
-if($email=="admin" && $password=="admin")
+if($email=="admin" && $password=="gocoronago")
 {
 	header("Location:AdminHome.php");
 }
