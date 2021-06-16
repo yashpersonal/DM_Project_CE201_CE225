@@ -23,7 +23,7 @@ ELECTIONS was born out of years of frustration running elections for the organiz
 We knew we could do better.ELECTIONS is designed and developed. We do our best to build simple elegant technology solutions to real world problems by listening to our customer needs. And <strong>we are always looking to be better!</strong> So feel free to <strong>email us</strong> with any question or comments or improvements!<br><br>
       Email Addresses:<br>
       Yash Tiwari: 20ceuod024@ddu.ac.in<br>
-      Acharya Rahil: 20ceuod004@ddu.ac.in<br>
+      Rahil Acharya: 20ceuod004@ddu.ac.in<br>
 	</p>
   </div>
  </div> 
