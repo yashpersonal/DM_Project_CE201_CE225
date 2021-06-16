@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>e-ELECTION</title>
+  <title>ELECTIONS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,43 +18,60 @@
 	<div class="jumbotron text-center"  style="background-color:#61CDF5;color:white">
 		<div class="col-sm-12">
 			<form action="" method="post">
-			<input type="submit" name="submit" class="btn btn-primary btn-block" value="Start Elections" >
+			<div class="form-group">
+			  <input type="text" class="form-control" name="date_to_start" id="pwd" placeholder="Enter From Date" required>
+			</div>
+
+			<div class="form-group">
+			  <input type="text" class="form-control" name="date_to_end" id="pwd" placeholder="Enter End Date" required>
+			</div>
+
+			<input type="submit" name="start" class="btn btn-primary btn-block" value="Start Elections" >
+			<input type="submit" name="stop" class="btn btn-primary btn-block" value="Stop Elections" >
 			</form>
+
 			<?php
-			session_start();
-			if(isset($_POST['submit']))
+
+		require('connection.php');
+		        
+			if(isset($_POST['start']))
 			{
-				if(empty($_SESSION['started']))
+				$from = $_POST['date_to_start'];
+				$end = $_POST['date_to_end'];
+				if( $from !="stop" && $end != "stop")
 				{
-					include('connection.php');
-					date_default_timezone_set("Asia/Kolkata");
-					$d=date("m-d-Y h:i a");
-					$d1=date("d");
-					$d1=$d1+2;
-					$d2=date("m-$d1-Y h:i a");
-					$sql = "INSERT INTO elections (name, fromdate,todate) VALUES ('cr', '$d','$d2')";
-					$conn->query($sql);
-					$sql1 = "INSERT INTO elections (name, fromdate,todate) VALUES ('mi', '$d','$d2')";
-					$conn->query($sql1);
-					$sql2 = "INSERT INTO elections (name, fromdate,todate) VALUES ('sort','$d','$d2')";
-					$conn->query($sql2);
-					$sql3 = "INSERT INTO elections (name, fromdate,todate) VALUES ('ecell', '$d','$d2')";
-					$conn->query($sql3);
-					$sql4 = "INSERT INTO elections (name, fromdate,todate) VALUES ('ci', '$d','$d2')";
-					$conn->query($sql4);
-					$sql5 = "INSERT INTO elections (name, fromdate,todate) VALUES ('si','$d','$d2')";
-					$conn->query($sql5);
-					$_SESSION['started']=1;
+					$updatequery="update elections set status=1,fromdate='$from',todate='$end'";
+					$res=mysqli_query($conn, $updatequery);
+						//$result=mysqli_query($conn, $updatequery);
+					//echo "<script type='text/javascript'>alert('Election started!')</script>";
+					//$sql = "INSERT INTO elections(id,name,fromdate,todate,status)VALUES(1,'All' '$from','$end','1')";
+						if ($res)
+						{
+							echo "<script type='text/javascript'>alert('Election started!')</script>";
+						}
+						
 				}
-				else
-				{
-					echo "<h2>Election has already Started.</h2>";
-					echo "<script>document.getElementById('submit').style.display='none';</script>";
-				}
-			}			
+					
+			}
+			if(isset($_POST['stop']))
+			{
+					if($_POST['date_to_start'] == "stop" && $_POST['date_to_end'] == "stop")
+					{
+						$updatequery="update elections set status=0";
+						$result=mysqli_query($conn, $updatequery);
+						if($result)
+						{
+							echo "<script type='text/javascript'>alert('Election stopped!')</script>";
+					    }
+
+					}
+					
+				
+			}	
+
 			?>
 		</div>
-		<br><br><br>
+		<br><br><br><br/><br/><br/>
 	</div>	
 	<div class="jumbotron"  style="background-color:lightgreen;color:white">
 		<div class="row">
