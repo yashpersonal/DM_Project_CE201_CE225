@@ -54,8 +54,8 @@
                         message: 'Password is required and cannot be empty'
                     },
 					stringLength: {
-                        min: 8,
-                        message: 'Your password must be at least 8 characters long'
+                        min: 10,
+                        message: 'Your password must be at least 10 characters long'
                     }
                 }
             },
