@@ -10,5 +10,5 @@ Tiwacharya's Web Development
 
 ### Developers
 
-[Yash Tiwari](https://github.com/ssp4all)
+[Yash Tiwari](https://github.com/yashpersonal)
 [Rahil Acharya](https://github.com/rahil003)
