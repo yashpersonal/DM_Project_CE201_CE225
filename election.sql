@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2021 at 01:59 PM
+-- Generation Time: Jun 16, 2021 at 05:40 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -43,7 +43,8 @@ CREATE TABLE `cr` (
 INSERT INTO `cr` (`email`, `divi`, `gender`, `about`, `name`, `votes`) VALUES
 ('miracleneil5@gmail.com', 'fe', 'male', 'ythtyh', 'Ayush Tiwari', 0),
 ('tnyash007@gmail.com', 'fe', 'female', 'iasmdmfsfdf', 'Anshika Tiwari', 1),
-('yashd2d@gmail.com', 'fe', 'male', 'hhjrefgdgjdvdfv', 'Yash Tiwari', 2);
+('yashd2d@gmail.com', 'fe', 'male', 'hhjrefgdgjdvdfv', 'Yash Tiwari', 4),
+('yashtechie001@gmail.com', 'fe', 'male', 'Hello I will be new Cr of class if you vote me . I will do lot for you if you will help.', 'Manish Tiwari', 0);
 
 -- --------------------------------------------------------
 
@@ -65,6 +66,7 @@ CREATE TABLE `culturalincharge` (
 --
 
 INSERT INTO `culturalincharge` (`email`, `divi`, `gender`, `about`, `name`, `votes`) VALUES
+('technicalraksha@gmail.com', 'fe', 'male', '......fvf.vf.vf.v.f.fv.fvfv', 'Prakash Malhotra', 0),
 ('yashd2d@gmail.com', 'fe', 'male', 'hello I am Yash', 'Yash Tiwari', 0);
 
 -- --------------------------------------------------------
@@ -101,8 +103,7 @@ CREATE TABLE `elections` (
 --
 
 INSERT INTO `elections` (`id`, `name`, `fromdate`, `todate`, `status`) VALUES
-(5, 'cr', '12-06-2021 20:35 pm', '13-06-2021 11:26 am', 0),
-(85, 'cr', '12-06-2021 20:35 pm', '13-06-2021 11:26 am', 1);
+(1, 'cr', '16-06-2022', '18-07-2022', 1);
 
 -- --------------------------------------------------------
 
@@ -165,8 +166,10 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`firstname`, `lastname`, `email`, `cemail`, `password`, `dob`, `mobileno`, `gender`, `course`, `divi`, `token_id`, `cr`, `ecellinncharge`, `sportincharge`, `musicincharge`, `culturalincharge`) VALUES
 ('Ayush', 'Tiwari', 'miracleneil5@gmail.com', 'lalu@gmail.com', 'ayush12345', '2004-11-30', '9374700428', 'male', 'Comp', 'fe', '24', 1, 0, 0, 0, 0),
+('Prakash', 'Malhotra', 'technicalraksha@gmail.com', 'abc@gmail.com', 'yash123456', '2001-11-30', '9876543211', 'male', 'Comp', 'fe', '18', 1, 0, 0, 0, 0),
 ('Anshika', 'Tiwari', 'tnyash007@gmail.com', 'anshu@gmail.com', 'anshika@12', '2004-11-30', '9377892723', 'female', 'Comp', 'fe', '25', 1, 0, 0, 0, 0),
-('Yash', 'Tiwari', 'yashd2d@gmail.com', 'yashtechie001@gmail.com', 'yash123456', '2001-10-07', '7016183012', 'male', 'Comp', 'fe', '21', 1, 0, 0, 0, 0);
+('Yash', 'Tiwari', 'yashd2d@gmail.com', 'yashtechie001@gmail.com', 'yash123456', '2001-10-07', '7016183012', 'male', 'Comp', 'fe', '21', 1, 0, 0, 0, 0),
+('Manish', 'Tiwari', 'yashtechie001@gmail.com', 'demo@gmail.com', 'yash123456', '2001-11-30', '9876543210', 'male', 'Comp', 'fe', '22', 1, 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
