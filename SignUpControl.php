@@ -14,7 +14,7 @@ $dob=$_POST['dob'];
 $mobileno=$_POST['mobileno'];
 
 $db="user";
-$random_no= rand(10,25);
+$random_no= rand(1,20000);
 $sql = "INSERT INTO $db (firstname, lastname, email,cemail,password,dob,mobileno,gender,course,divi,token_id)
  VALUES ('$firstname', '$lastname','$email','$cemail','$password','$dob','$mobileno','$gender','$course','$div','$random_no')";
 if ($conn->query($sql) === TRUE)
